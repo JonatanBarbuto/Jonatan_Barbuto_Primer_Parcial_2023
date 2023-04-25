@@ -60,7 +60,7 @@ namespace Entidades
         /// Metodo para generar texto de salida
         /// </summary>
         /// <returns>Texto de salida</returns>
-        protected override string MostrarDatos()
+        public override string MostrarDatos()
         {
             StringBuilder sb = new StringBuilder();
             sb.AppendLine("*** Camioneta ***");

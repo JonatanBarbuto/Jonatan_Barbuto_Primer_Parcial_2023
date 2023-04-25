@@ -33,6 +33,7 @@
             btnSalida = new Button();
             textBox1 = new TextBox();
             textBox2 = new TextBox();
+            btnFacturacion = new Button();
             SuspendLayout();
             // 
             // btnEntrada
@@ -69,6 +70,16 @@
             textBox2.Size = new Size(125, 27);
             textBox2.TabIndex = 3;
             // 
+            // btnFacturacion
+            // 
+            btnFacturacion.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            btnFacturacion.Location = new Point(378, 362);
+            btnFacturacion.Name = "btnFacturacion";
+            btnFacturacion.Size = new Size(105, 29);
+            btnFacturacion.TabIndex = 4;
+            btnFacturacion.Text = "Facturacion";
+            btnFacturacion.UseVisualStyleBackColor = true;
+            // 
             // FormPrincipal
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
@@ -76,6 +87,7 @@
             BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
             BackgroundImageLayout = ImageLayout.Stretch;
             ClientSize = new Size(800, 450);
+            Controls.Add(btnFacturacion);
             Controls.Add(textBox2);
             Controls.Add(textBox1);
             Controls.Add(btnSalida);
@@ -86,7 +98,7 @@
             FormBorderStyle = FormBorderStyle.FixedSingle;
             Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "FormPrincipal";
-            Text = "***Estacionamiento Barbuto***";
+            Text = "*** Estacionamiento Barbuto ***";
             ResumeLayout(false);
             PerformLayout();
         }
@@ -97,5 +109,6 @@
         private Button btnSalida;
         private TextBox textBox1;
         private TextBox textBox2;
+        private Button btnFacturacion;
     }
 }

@@ -69,6 +69,7 @@ namespace Entidades
 
         public void liberarEspacio(Vehiculo vehiculo)
         {
+            vehiculo.HoraSalida = DateTime.Now;
             this.ocupado = false;
         }
 

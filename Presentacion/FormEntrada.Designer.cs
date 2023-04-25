@@ -29,7 +29,29 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormEntrada));
+            btnIngresar = new Button();
+            btnCancelarIngreso = new Button();
             SuspendLayout();
+            // 
+            // btnIngresar
+            // 
+            btnIngresar.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            btnIngresar.Location = new Point(63, 362);
+            btnIngresar.Name = "btnIngresar";
+            btnIngresar.Size = new Size(94, 29);
+            btnIngresar.TabIndex = 1;
+            btnIngresar.Text = "Ingresar";
+            btnIngresar.UseVisualStyleBackColor = true;
+            // 
+            // btnCancelarIngreso
+            // 
+            btnCancelarIngreso.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            btnCancelarIngreso.Location = new Point(194, 362);
+            btnCancelarIngreso.Name = "btnCancelarIngreso";
+            btnCancelarIngreso.Size = new Size(94, 29);
+            btnCancelarIngreso.TabIndex = 2;
+            btnCancelarIngreso.Text = "Cancelar";
+            btnCancelarIngreso.UseVisualStyleBackColor = true;
             // 
             // FormEntrada
             // 
@@ -38,13 +60,18 @@
             BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
             BackgroundImageLayout = ImageLayout.Stretch;
             ClientSize = new Size(800, 450);
+            Controls.Add(btnCancelarIngreso);
+            Controls.Add(btnIngresar);
             DoubleBuffered = true;
             Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "FormEntrada";
-            Text = "***Formulario De Entrada***";
+            Text = "*** Formulario De Entrada ***";
             ResumeLayout(false);
         }
 
         #endregion
+
+        private Button btnIngresar;
+        private Button btnCancelarIngreso;
     }
 }

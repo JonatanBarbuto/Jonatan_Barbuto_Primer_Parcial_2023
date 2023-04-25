@@ -33,23 +33,7 @@ namespace Entidades
         }
 
 
-        /// <summary>
-        /// Propiedad con get y set de patente
-        /// </summary>
-        public string Patente
-        {
-            get
-            {
-                return this.patente;
-            }
-            set
-            {
-                if (!string.IsNullOrWhiteSpace(value) && ValidarPatente(value))
-                {
-                    this.patente = value;
-                }
-            }
-        }
+        
 
         public virtual double CostoEstacionamiento { get;}
 
@@ -94,7 +78,25 @@ namespace Entidades
             set 
             { 
                 this.horaSalida = value;
-             }
+            }
+        }
+
+        /// <summary>
+        /// Propiedad con get y set de patente
+        /// </summary>
+        public string Patente
+        {
+            get
+            {
+                return this.patente;
+            }
+            set
+            {
+                if (!string.IsNullOrWhiteSpace(value) && ValidarPatente(value))
+                {
+                    this.patente = value;
+                }
+            }
         }
 
         /// <summary>
@@ -111,13 +113,15 @@ namespace Entidades
         /// Metodo para generar texto de salida
         /// </summary>
         /// <returns>Texto de salida</returns>
-        protected virtual string MostrarDatos()
+        public virtual string MostrarDatos()
         {
             StringBuilder sb = new StringBuilder();
             sb.AppendLine("*************************");
             sb.AppendLine($"Marca: {this.marca}");
             sb.AppendLine($"Modelo: {this.modelo}");
             sb.AppendLine($"Patente: {this.patente}");
+            sb.AppendLine($"Hora de Entrada: {this.horaEntrada}");
+            sb.AppendLine($"Hora de Salida: {this.horaSalida}");
 
             return sb.ToString();
         }
