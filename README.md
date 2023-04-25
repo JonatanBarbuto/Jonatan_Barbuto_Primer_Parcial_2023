@@ -1,1 +1,3 @@
-# Jonatan_Barbuto_Primer_Parcial_2023
+# Parcial Programacion 2
+## Alumno: Jonatan Barbuto
+## Tema: Proyecto de Estacionamiento
